@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     unique: true,
   },
   contact: {
-    type: Number,
+    type: String,
     require: true,
     unique: true,
   },
@@ -26,7 +26,10 @@ function validateUser(user) {
   const schema = {
     name: Joi.string().min(1).max(50).required(),
     email: Joi.string().max(255).required().email(),
-    contact: Joi.number().required(),
+    contact: Joi.string()
+      .length(10)
+      .regex(/^[0-9]+$/)
+      .required(),
   };
 
   return Joi.validate(user, schema);
