@@ -1,0 +1,75 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  
+}
+.Draggablecontainer {
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+.Draggablecontainer h1 {
+  font-size: 5rem;
+}
+
+.Draggablecontainer h3 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.flex-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+  box-sizing: border-box;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+  box-sizing: border-box;
+  margin: 0.5em;
+  border-radius: 10px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+label {
+  display: block;
+  margin: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.APICallContainer {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  background-color: white;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10px;
+}

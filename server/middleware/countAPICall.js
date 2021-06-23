@@ -1,6 +1,6 @@
-let count = 0;
+const { setTotalAPICall, getTotalAPICall } = require("../util/util");
 module.exports = async function (req, res, next) {
-  count++;
-  console.log("API hit is", count);
-  next()
+  setTotalAPICall();
+  console.log("API hit is", getTotalAPICall());
+  next();
 };
